@@ -1,10 +1,10 @@
 import React, { Component, useState } from "react";
-// import '../css/PersonalAvatar.css';
+import '../css/NavBarStyle.css';
 
 
 export default function NavBar() {
     return(
-        <div>
+        <div className="left-container">
             <h3>
                 Home
             </h3>

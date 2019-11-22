@@ -9,8 +9,13 @@ class AppStore {
 
     @action
     resetStore = () => {
-        currentPage = 'Main';
+        this.currentPage = 'Main';
     };
+
+    @action
+    setCurrentPage = (page) => {
+        this.currentPage = page;
+    }
 
 }
 

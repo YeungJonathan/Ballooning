@@ -5,16 +5,28 @@ import React from "react";
 //   Route,
 // } from "react-router-dom";
 import Home from './components/Home';
+import './css/MainStyle.css';
 import NavBar from './components/NavBar';
-import observer from 'mobx-react';
+import {observer} from 'mobx-react';
+import appStore from './stores/AppStore';
 
 @observer
 class App extends React.Component{
 
+  renderMainContent(){
+    const {currentPage} = appStore;
+    switch(currentPage){
+      case "Main":
+        return <Home />
+      default:
+        return <Home />
+    }
+  }
+
   render() {
     return (
       // <Router>
-        <div style={{display:"flex"}}>
+        <div className="container">
           <NavBar />
           {this.renderMainContent()}
           {/* <Switch>
@@ -27,3 +39,5 @@ class App extends React.Component{
     );
   }
 }
+
+export default App;

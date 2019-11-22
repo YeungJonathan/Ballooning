@@ -1,0 +1,4 @@
+.right-container{
+    display: flex;
+    flex-grow: 10;
+}
