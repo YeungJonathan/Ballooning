@@ -1,4 +1,16 @@
-.right-container{
-    display: flex;
-    flex-grow: 10;
+.main-photo{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+img{
+    /* margin-left: auto; */
+    /* margin-top: auto;
+    margin-right: auto;
+    margin-bottom: auto; */
+    max-width:100%;
+    max-height:100%;
+    object-fit: contain;
 }

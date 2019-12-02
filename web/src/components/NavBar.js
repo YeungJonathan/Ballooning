@@ -1,19 +1,26 @@
 import React, { Component, useState } from "react";
 import '../css/NavBarStyle.css';
+import appStore from '../stores/AppStore';
 
 
 export default function NavBar() {
     return(
-        <div className="left-container">
-            <h3>
+        <>
+            <a onClick={()=>appStore.setCurrentPage("Main")} className="section-name">
                 Home
-            </h3>
-            <h3>
+            </a>
+            <a onClick={()=>appStore.setCurrentPage("About")} className="section-name">
                 About
-            </h3>
-            <h3>
+            </a>
+            <a onClick={()=>appStore.setCurrentPage("Portfolio")} className="section-name">
                 Portfolio
-            </h3>
-        </div>
+            </a>
+            <a onClick={()=>appStore.setCurrentPage("Projects")} className="section-name">
+            Projects
+            </a>
+            <a onClick={()=>appStore.setCurrentPage("Contacts")} className="section-name">
+            Contacts
+            </a>
+        </>
     );
 }
